@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
+from app.routers import topics, jobs, documents, clusters, summaries
 
 app = FastAPI(
     title="Discourse Radar API",
@@ -19,6 +20,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include routers
+app.include_router(topics.router)
+app.include_router(jobs.router)
+app.include_router(documents.router)
+app.include_router(clusters.router)
+app.include_router(summaries.router)
 
 
 @app.get("/health")
