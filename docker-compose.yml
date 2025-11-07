@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: discourse_radar_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: discourse_user
+      POSTGRES_PASSWORD: discourse_pass
+      POSTGRES_DB: discourse_radar
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U discourse_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
