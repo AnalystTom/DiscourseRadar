@@ -15,12 +15,12 @@ print("\n📁 DIRECTORY STRUCTURE")
 print("-" * 80)
 
 structure = {
-    "apps/server/app": ["config.py", "database.py", "main.py"],
-    "apps/server/app/models": ["topic.py", "job.py", "document.py", "cluster.py", "summary.py"],
-    "apps/server/app/schemas": ["topic.py", "job.py", "document.py", "cluster.py", "summary.py"],
-    "apps/server/app/routers": ["topics.py", "jobs.py", "documents.py", "clusters.py", "summaries.py"],
-    "apps/server/tests": ["test_api.py"],
-    "apps/server/alembic/versions": ["001_initial_schema.py"],
+    "app/server/app": ["config.py", "database.py", "main.py"],
+    "app/server/app/models": ["topic.py", "job.py", "document.py", "cluster.py", "summary.py"],
+    "app/server/app/schemas": ["topic.py", "job.py", "document.py", "cluster.py", "summary.py"],
+    "app/server/app/routers": ["topics.py", "jobs.py", "documents.py", "clusters.py", "summaries.py"],
+    "app/server/tests": ["test_api.py"],
+    "app/server/alembic/versions": ["001_initial_schema.py"],
 }
 
 for directory, files in structure.items():

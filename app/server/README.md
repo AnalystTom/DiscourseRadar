@@ -7,7 +7,7 @@ FastAPI backend for the Discourse Radar application.
 ### 1. Install Dependencies
 
 ```bash
-cd apps/server
+cd app/server
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 ### 2. Configure Environment
 
-Create a `.env` file in `apps/server/` based on `.env.example`:
+Create a `.env` file in `app/server/` based on `.env.example`:
 
 ```bash
 cp ../../.env.example .env
@@ -40,7 +40,7 @@ This will start a Postgres database on port 5432.
 ### 4. Run Migrations
 
 ```bash
-cd apps/server
+cd app/server
 source venv/bin/activate
 alembic upgrade head
 ```
@@ -113,7 +113,7 @@ pytest
 ## Project Structure
 
 ```
-apps/server/
+app/server/
 ├── alembic/              # Database migrations
 │   └── versions/         # Migration files
 ├── app/

@@ -7,13 +7,13 @@ Tasks organized in sequential order for building the application.
 ## Phase 1: Project Setup & Infrastructure
 
 ### 1.1 Repository Structure
-- [ ] Create `apps/server` and `apps/client` directories
+- [ ] Create `app/server` and `app/client` directories
 - [ ] Initialize `.env.example` with all required environment variables
 - [ ] Setup `.gitignore` for Python and Node artifacts
 
 ### 1.2 Database Setup
 - [ ] Setup local Postgres (Docker Compose recommended)
-- [ ] Configure SQLAlchemy in `apps/server`
+- [ ] Configure SQLAlchemy in `app/server`
 - [ ] Initialize Alembic for migrations
 - [ ] Create initial migration
 
@@ -25,7 +25,7 @@ Tasks organized in sequential order for building the application.
 
 ---
 
-## Phase 2: Backend Foundation (apps/server)
+## Phase 2: Backend Foundation (app/server)
 
 ### 2.1 FastAPI Scaffolding
 - [ ] Initialize FastAPI app with basic structure
@@ -112,7 +112,7 @@ Tasks organized in sequential order for building the application.
 
 ---
 
-## Phase 6: Frontend Foundation (apps/client)
+## Phase 6: Frontend Foundation (app/client)
 
 ### 6.1 React + Vite Setup
 - [ ] Initialize Vite app with React and TypeScript
@@ -199,7 +199,7 @@ Tasks organized in sequential order for building the application.
 - [ ] Configure secret access permissions
 
 ### 9.3 Backend Deployment
-- [ ] Create Dockerfile for `apps/server` (or use buildpacks)
+- [ ] Create Dockerfile for `app/server` (or use buildpacks)
 - [ ] Build and push server image to Artifact Registry
 - [ ] Deploy `discourse-server` to Cloud Run
 - [ ] Configure environment variables and secrets
@@ -207,7 +207,7 @@ Tasks organized in sequential order for building the application.
 - [ ] Test `/health` endpoint
 
 ### 9.4 Frontend Deployment
-- [ ] Build production bundle for `apps/client`
+- [ ] Build production bundle for `app/client`
 - [ ] Create Dockerfile for static serving (or use Cloud Storage)
 - [ ] Deploy `discourse-client` to Cloud Run
 - [ ] Configure `SERVER_URL` environment variable

@@ -89,7 +89,7 @@ All modules successfully imported:
 ## Running Tests Locally
 
 ```bash
-cd apps/server
+cd app/server
 source venv/bin/activate
 pip install -r requirements.txt
 pytest tests/test_api.py -v

@@ -6,8 +6,8 @@ Build a production-ready, multi-tenant SaaS that discovers, ingests, and summari
 
 ## Repo layout
 
-* `apps/client` – Frontend (ag-ui based, React/Vite)
-* `apps/server` – Backend (FastAPI + LangChain agents + Gemini API + Firecrawl integration)
+* `app/client` – Frontend (ag-ui based, React/Vite)
+* `app/server` – Backend (FastAPI + LangChain agents + Gemini API + Firecrawl integration)
 
 ## Core capabilities (MVP)
 
@@ -66,7 +66,7 @@ Define these as secrets/vars in local `.env` and in Cloud Run:
 
 ---
 
-## Backend (`apps/server`) — step-by-step plan
+## Backend (`app/server`) — step-by-step plan
 
 ### 1) Project scaffolding
 
@@ -125,7 +125,7 @@ Define these as secrets/vars in local `.env` and in Cloud Run:
 
 ---
 
-## Frontend (`apps/client`) — step-by-step plan
+## Frontend (`app/client`) — step-by-step plan
 
 ### 1) Scaffolding
 
@@ -158,8 +158,8 @@ Define these as secrets/vars in local `.env` and in Cloud Run:
 
 1. Checkout repo; create `.env` in root with variables listed above.
 2. Start Postgres locally (e.g., Docker) and run migrations.
-3. In `apps/server`: install deps; run FastAPI with reload; ensure `/health` OK.
-4. In `apps/client`: install deps; run dev server; set `SERVER_URL`.
+3. In `app/server`: install deps; run FastAPI with reload; ensure `/health` OK.
+4. In `app/client`: install deps; run dev server; set `SERVER_URL`.
 5. Create a test topic (e.g., "local models for AI news"); verify job runs and partial results stream.
 6. Validate that disallowed domains are ignored and that Reddit compliance mode is respected.
 
